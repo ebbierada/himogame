@@ -17,7 +17,7 @@
 						); ?>
 		</section>
 		<section id='gameHistory'>
-			<span class="sys_label">main-aside</span>
+			<span class="sys_label">main-aside (test)</span>
 			<div>
 				<h2>Game History</h2>
 				<div id="messagesContainer"></div>
