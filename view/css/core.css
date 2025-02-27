@@ -1,0 +1,74 @@
+/* System Variable */
+
+:root {
+	/*	surface color*/
+	--sys-color-main-surface: #282a2c;
+	--sys-color-main-surface-2: #1b1c1d;
+
+	/*	font color*/
+	--sys-color-font-main: #ededed;
+	--sys-color-font-2: #868686;
+
+	/*	Margin and Padding*/
+	--sys-padding: 10px;
+
+	/* borders style */
+	--sys-border-default: solid 1px var(--sys-color-font-2);
+}
+
+/* General Style */
+
+* {
+	font-family: monospace;
+}
+
+	/* nameless elements */
+
+body {
+	margin: 0;
+}
+main {
+	display: flex;
+	background-color: var(--sys-color-main-surface);
+	height: 100vh;
+	color: var(--sys-color-font-main);
+}
+section	{
+	flex: 1;
+	padding: var(--sys-padding);
+}
+div {
+	padding: var(--sys-padding);
+}
+
+	/* Id Elements */
+
+#primaryContainer {
+	flex: 2;
+}
+#gameHistory {
+	background-color: var(--sys-color-main-surface-2);
+}
+
+	/* Class Elements */
+
+.sys_label {
+	color: var(--sys-color-font-2);
+}
+
+		/* Card Element */
+	.card {
+		border: var(--sys-border-default);
+		padding: 0;
+	}
+	.card-header {
+		border-bottom: var(--sys-border-default);
+		display: flex;
+	}
+		.card-header h2 {
+			margin: 0;
+			flex: 1;
+		}
+	.card-footer {
+		border-top: var(--sys-border-default);
+	}
