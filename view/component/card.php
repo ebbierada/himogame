@@ -1,7 +1,6 @@
 <!-- card component -->
 <?php
 	$cardData = $cardData ?? [];
-	print_r($cardData);
 ?>
 <section class="card">
 	<div class="card-header">
