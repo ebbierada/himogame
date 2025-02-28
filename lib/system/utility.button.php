@@ -44,20 +44,20 @@ class Button {
 	public function render(): string {
 		$button = '<button';
 
-		if (!empty($id)) {
-			$button .= ' id="' . htmlspecialchars($id) . '"';
+		if (!empty($this->id)) {
+			$button .= ' id="' . htmlspecialchars($this->id) . '"';
 		}
 
-		if (!empty($class)) {
-			$button .= ' class="' . htmlspecialchars($class) . '"';
+		if (!empty($this->class)) {
+			$button .= ' class="' . htmlspecialchars($this->class) . '"';
 		}
 
-		if (!empty($onclick)) {
-			$button .= ' onclick="' . htmlspecialchars($onclick) . '"';
+		if (!empty($this->onclick)) {
+			$button .= ' onclick="' . htmlspecialchars($this->onclick) . '"';
 		}
 
 		$button .= '>';
-		$button .= htmlspecialchars($label);
+		$button .= htmlspecialchars($this->label);
 		$button .= '</button>';
 
 		return $button;
