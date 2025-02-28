@@ -23,7 +23,11 @@
 					type: 'button',
 					id:	'diceRollBtn'
 				);
-				
+				$selectRole = '
+					<select name="role" id="role">
+						<option value="player" defer>Player</option>
+						<option value="npc">Non-playable character</option>
+					</select>';
 				$selecAbility = '
 					<select name="selectAbility" id="selectAbility">
 						<option value="strength">Strength</option>
@@ -37,13 +41,14 @@
 					<select name="selectSkill" id="selectSkill">
 					</select>	
 				';
+				$diceRollCard->appendBodyContent($selectRole);
 				$diceRollCard->appendBodyContent($selecAbility . $selectSkill);
 				$diceRollCard->appendBodyContent($diceRollButton->render());
 				
 				//render Card
 				echo $diceRollCard->render();
 			?>
-
+			
 		</section>
 		<section id='gameHistory'>
 			<span class="sys_label">main-aside (test)</span>
