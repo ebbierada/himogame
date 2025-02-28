@@ -24,7 +24,7 @@
 					id:	'diceRollBtn'
 				);
 				$selectRole = '
-					<select name="role" id="role">
+					<select name="selectRole" id="selectRole">
 						<option value="player" defer>Player</option>
 						<option value="npc">Non-playable character</option>
 					</select>';

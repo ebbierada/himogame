@@ -1,5 +1,6 @@
 
 // Ability and Skill selection
+const selectRole = document.getElementById('selectRole');
 const selectAbility = document.getElementById('selectAbility');
 const selectSkill   = document.getElementById('selectSkill');
 const abilitySkills = {
@@ -25,9 +26,18 @@ selectAbility.addEventListener('change',()=>{
 //Game Message Display function
 const messagesContainer = document.getElementById('messagesContainer');
 
+function formatMessage(msg,type){
+    const format = {
+        'standard': msg,
+        'diceRoll': `${selectRole.value} roll ${selectSkill.value}: ${msg}`
+    }
+
+    return format[type];
+}
+
 function displayMessage(msg, type = 'standard'){
     const messageLine = document.createElement('p');
-    messageLine.textContent = msg
+    messageLine.textContent = formatMessage(msg,type);
     messagesContainer.appendChild(messageLine);
 } 
 
@@ -40,5 +50,5 @@ function diceRoll(side = 20) {
 }
 
 rollDiceBtn.addEventListener('click',()=>{
-    displayMessage(diceRoll());
+    displayMessage(diceRoll(),'diceRoll');
 });
