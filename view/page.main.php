@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="view/css/core.style.css">
+	<script src="view/js/script.js" defer></script>
 	<title>Dungeon and Dragon</title>
 </head>
 <body>
@@ -23,18 +24,26 @@
 					id:	'diceRollBtn'
 				);
 				
+				$selecAbility = '
+					<select name="selectAbility" id="selectAbility">
+						<option value="strength">Strength</option>
+						<option value="dexterity">Dexterity</option>
+						<option value="intelligence">Intelligence</option>
+						<option value="wisdom">Wisdom</option>
+						<option value="charisma">Charisma</option>
+						<option value="constitution" selected>Constitution</option>
+					</select>';
+				$selectSkill = '
+					<select name="selectSkill" id="selectSkill">
+					</select>	
+				';
+				$diceRollCard->appendBodyContent($selecAbility . $selectSkill);
 				$diceRollCard->appendBodyContent($diceRollButton->render());
-
+				
+				//render Card
 				echo $diceRollCard->render();
 			?>
-		<select name="selectAbility" id="selectAbility">
-			<option value="Strength">Strength</option>
-			<option value="Dexterity">Dexterity</option>
-			<option value="Intelligence">Intelligence</option>
-			<option value="Wisdom">Wisdom</option>
-			<option value="Charisma">Charisma</option>
-			<option value="Constitution">Constitution</option>
-		</select>
+
 		</section>
 		<section id='gameHistory'>
 			<span class="sys_label">main-aside (test)</span>
