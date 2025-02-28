@@ -11,23 +11,30 @@
 		<section id="primaryContainer">
 			<span class="sys_label">Main</span>
 			<?php 
-			$myCard = new Card(
-					title:	'Dice Roll',
-					body: 	'<button>Roll Dice</button>',
-					footer: 'this my foot' );
-			echo $myCard->render();
+				$diceRollCard = new Card(
+						title:	'Dice Roll',
+						display_footer: false
+				);
+				
+				$diceRollButton = new Button(
+					label: 'Roll D20',
+					name: 'diceRollBtn',
+					type: 'button',
+					id:	'diceRollBtn'
+				);
+				
+				$diceRollCard->appendBodyContent($diceRollButton->render());
 
+				echo $diceRollCard->render();
 			?>
-
-			<section class="card">
-				<div class="card-header">
-					<h2>title</h2>
-				</div>
-				<div class="card-body">
-					<button>Roll Dice</button>
-				</div>
-				<div class="card-footer">footer content</div>
-			</section>
+		<select name="selectAbility" id="selectAbility">
+			<option value="Strength">Strength</option>
+			<option value="Dexterity">Dexterity</option>
+			<option value="Intelligence">Intelligence</option>
+			<option value="Wisdom">Wisdom</option>
+			<option value="Charisma">Charisma</option>
+			<option value="Constitution">Constitution</option>
+		</select>
 		</section>
 		<section id='gameHistory'>
 			<span class="sys_label">main-aside (test)</span>
