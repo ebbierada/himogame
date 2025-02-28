@@ -9,9 +9,14 @@
 </head>
 <body>
 	<main>
+		<section id="stat_block">
+			<span class="sys_label">Stat Block</span>
+			<?php include 'view/component/player_stat_block.php'; ?>
+		</section>
 		<section id="primaryContainer">
 			<span class="sys_label">Main</span>
-			<?php 
+			<?php
+				
 				$diceRollCard = new Card(
 						title:	'Dice Roll',
 						display_footer: false
