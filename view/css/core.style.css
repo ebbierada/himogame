@@ -41,6 +41,10 @@ div {
 	padding: var(--sys-padding);
 }
 
+h2, h3 {
+	margin: 0;
+}
+
 	/* Id Elements */
 
 #primaryContainer {
@@ -68,9 +72,18 @@ div {
 		display: flex;
 	}
 		.card-header h2 {
-			margin: 0;
 			flex: 1;
 		}
 	.card-footer {
 		border-top: var(--sys-border-default);
 	}
+
+
+.stat h3 {
+	border-bottom: var(--sys-border-default)
+}
+
+.scroll {
+	height: 100%;
+	overflow: auto;
+}
