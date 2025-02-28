@@ -1,4 +1,5 @@
 <!-- card component -->
+<!-- deprecated -->
 <?php
 	$cardData = $cardData ?? [];
 ?>

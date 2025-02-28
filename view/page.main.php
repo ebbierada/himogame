@@ -10,11 +10,23 @@
 	<main>
 		<section id="primaryContainer">
 			<span class="sys_label">Main</span>
-			<?php echo 	createCard(
-							title:'My Card', 
-							body: 'body contetn', 
-							footer: 'this is foot'
-						); ?>
+			<?php 
+			$myCard = new Card(
+					title:	'My Card',
+					body: 	'Hello body',
+					footer: 'this my foot' );
+
+			$myInnerCard = new Card(
+				title:	'myInnerCard',
+				body:	'Inner card baby',
+				footer: 'Footer bady'
+			);
+
+			$myCard->appendBodyContent($myInnerCard->render());
+			$myCard->appendBodyContent('another bites the dust');
+			echo $myCard->render();
+
+			?>
 
 			<section class="card">
 				<div class="card-header">

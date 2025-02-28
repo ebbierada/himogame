@@ -1,13 +1,19 @@
 <?php
 	// create component card - ( HTML Template )
 	
-	function createCard(string $title, string $body, string $footer){
+	function createCard(	bool 	$display_header = true,
+							string 	$title = '', 
+							string 	$body = '', 
+							bool 	$display_footer  = true,
+							string 	$footer = '' ) 
+	{
 		$cardData = [
-			'title' => $title,
-			'body'	=> $body,
-			'footer'=> $footer
+			'display_header'	=> $display_header,
+			'title' 			=> $title,
+			'body'				=> $body,
+			'display_footer'	=> $display_footer,
+			'footer'			=> $footer
 		];
-
-		include 'view/component/card.php';
+		// include 'template/card.php';
 	};
 ?>
