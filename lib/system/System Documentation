@@ -1,11 +1,67 @@
 System Documentation
+====================
 
-Utility functions:
+Utility functions
+-----------------
+	
+	Class:	Card
+			-Represents a UI card component fpr rendering content.
+	Properties:
+    		- title (private, string): The title of the card.
+			- body (private, string): The body content of the card.
+			- displayHeader (private, boolean): Indicates if the header should be displayed.
+			- displayFooter (private, boolean): Indicates if the footer should be displayed.
+			- footer (private, string): The footer content of the card.
+	Parameters:
+			displayHeader (Boolean):
+				- Displays the card header section.
+				- Default: True
+			title (String):
+				- The card text title.
+			body (String):
+				- The card body's content.
+			displayFooter (Boolean):
+				- Displays the card footer section.
+				- Default: True
+			footer (String):
+				- The card footer's content.
+	Methods:
+				card.render()
+					- returns a HTML template of the Card component.
+				card.appendBodyContent()
+					- add a HTML content to the cards body.
 
-	class Card (
-		display_header (boolean) - Display the card header section. default = True
-		title (string) - Card text title.
-		body (string) - Card body's content.
-		display_footer (boolean) - Display the card footer section. defeault = True
-		footer - card footer's content.
-	)
+	
+	Class:	Button
+			- Creates a HTML button.
+	Parameters:
+			label (string):
+				- button name or label.
+			autofocus (boolean):
+				- Specifies that a button should automatically get focus when the page loads.
+				Default: false
+			disable (boolean):
+				- Specifies that a button should be disabled.
+				Default: false
+			name (string):
+				- Specifies a name for the button
+			type (string):
+				- Specifies the type of button
+				Options:
+					- button
+					- reset
+					- submit
+			value (string):
+				- Specifies an initial value for the button
+			class (string):
+				- Specifies one or more classnames for an element.
+			hidden (bool):
+				- Specifies that an element is not yet, or is no longer, relevant.
+				Default: false
+			id (string):
+				- Specifies a unique id for an element.
+			onclick (string):
+				- Script for mouse click on the element.
+	Methods:
+				button.render()
+					- return a HTML button from button class instance.
