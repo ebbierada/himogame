@@ -29,7 +29,7 @@ const messagesContainer = document.getElementById('messagesContainer');
 function formatMessage(msg,type){
     const format = {
         'standard': msg,
-        'diceRoll': `${selectRole.value} roll ${selectSkill.value}: ${msg}`
+        'diceRoll': `${selectRole.value} roll a ${msg} - ${selectSkill.value}`
     }
 
     return format[type];
