@@ -9,7 +9,7 @@
 </head>
 <body>
 	<main>
-		<section id="stat_block">
+		<section id="stat_block" class="scroll">
 			<span class="sys_label">Stat Block</span>
 			<?php include 'view/component/player_stat_block.php'; ?>
 		</section>

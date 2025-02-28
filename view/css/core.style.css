@@ -26,6 +26,7 @@
 
 body {
 	margin: 0;
+	background-color: var(--sys-color-main-surface);
 }
 main {
 	display: flex;
@@ -53,6 +54,9 @@ h2, h3 {
 #gameHistory {
 	background-color: var(--sys-color-main-surface-2);
 }
+#stat_block {
+	background-color: #2d2f32;
+}
 
 	/* Class Elements */
 
@@ -78,12 +82,28 @@ h2, h3 {
 		border-top: var(--sys-border-default);
 	}
 
-
 .stat h3 {
 	border-bottom: var(--sys-border-default)
 }
 
 .scroll {
-	height: 100%;
 	overflow: auto;
+}
+
+.character-info-2 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr)
+}
+
+.badge {
+	flex-grow: 1;
+	flex-basis: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border: var(--sys-border-default);
+}
+
+.badge-title {
+	font-size: xx-small;
 }

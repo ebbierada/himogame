@@ -1,4 +1,4 @@
-<section class="scroll">
+<section>
     <div class="stat character-info">
         <h3>Character info</h3>
         <dl>
@@ -9,6 +9,28 @@
             <dt>Class</dt>
                 <dd>Warlock</dd>
         </dl>
+    </div>
+    <div class="stat character-info-2">
+        <div class="badge">
+            <p class="badge-title">Armor Class</p>
+            <p>10</p>
+        </div>
+        <div class="badge">
+            <p class="badge-title">Initiative</p>
+            <p>10</p>
+        </div>
+        <div class="badge">
+            <p class="badge-title">Proficiency</p>
+            <p>10</p>
+        </div>
+        <div class="badge">
+            <p class="badge-title">HP</p>
+            <p>10</p>
+        </div>
+        <div class="badge">
+            <p class="badge-title">XP</p>
+            <p>10</p>
+        </div>
     </div>
     <div class="stat ability-info">
         <h3>Ability Scores / Modifier</h3>
