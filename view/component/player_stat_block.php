@@ -31,6 +31,10 @@
             <p class="badge-title">XP</p>
             <p>10</p>
         </div>
+        <div class="badge">
+            <p class="badge-title">Level</p>
+            <p>1</p>
+        </div>
     </div>
     <div class="stat ability-info">
         <h3>Ability Scores / Modifier</h3>
