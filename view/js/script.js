@@ -29,7 +29,7 @@ const messagesContainer = document.getElementById('messagesContainer');
 function formatMessage(msg,type){
     const format = {
         'standard': msg,
-        'diceRoll': `${selectRole.value} roll a ${msg} - ${selectSkill.value}`
+        'diceRoll': `${selectRole.value} roll a ${msg} (${selectSkill.value})`
     }
 
     return format[type];
@@ -50,5 +50,10 @@ function diceRoll(side = 20) {
 }
 
 rollDiceBtn.addEventListener('click',()=>{
-    displayMessage(diceRoll(),'diceRoll');
+    let result = diceRoll();
+    //Check result if natural 1 or 20
+    if([1,20].includes(result)){
+        result = 'NAT'+result;
+    }
+    displayMessage(result,'diceRoll');
 });
