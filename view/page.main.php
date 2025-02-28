@@ -12,18 +12,9 @@
 			<span class="sys_label">Main</span>
 			<?php 
 			$myCard = new Card(
-					title:	'My Card',
-					body: 	'Hello body',
+					title:	'Dice Roll',
+					body: 	'<button>Roll Dice</button>',
 					footer: 'this my foot' );
-
-			$myInnerCard = new Card(
-				title:	'myInnerCard',
-				body:	'Inner card baby',
-				footer: 'Footer bady'
-			);
-
-			$myCard->appendBodyContent($myInnerCard->render());
-			$myCard->appendBodyContent('another bites the dust');
 			echo $myCard->render();
 
 			?>
@@ -32,7 +23,9 @@
 				<div class="card-header">
 					<h2>title</h2>
 				</div>
-				<div class="card-body">body content</div>
+				<div class="card-body">
+					<button>Roll Dice</button>
+				</div>
 				<div class="card-footer">footer content</div>
 			</section>
 		</section>
