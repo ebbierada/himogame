@@ -53,7 +53,24 @@
 				//render Card
 				echo $diceRollCard->render();
 			?>
-			
+			<section>
+				<h3>Dice Roller (Custom)</h3>
+				<select name="dice" id="selectDice">
+					<option value="4">D4</option>
+					<option value="6" selected>D6</option>
+					<option value="8">D8</option>
+					<option value="10">D10</option>
+					<option value="12">D12</option>
+					<option value="20">D20</option>
+				</select>
+				<?php
+					$rollerBtn = new Button(
+						label: 'Roll Dice',
+						id: 'customDiceRoller'
+					);
+					echo $rollerBtn->render();
+				?>
+			</section>
 		</section>
 		<section id='gameHistory'>
 			<span class="sys_label">main-aside (test)</span>

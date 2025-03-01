@@ -26,9 +26,9 @@ Utility functions
 			footer (String):
 				- The card footer's content.
 	Methods:
-				card.render()
+				render()
 					- returns a HTML template of the Card component.
-				card.appendBodyContent()
+				appendBodyContent()
 					- add a HTML content to the cards body.
 
 	
@@ -63,5 +63,5 @@ Utility functions
 			onclick (string):
 				- Script for mouse click on the element.
 	Methods:
-				button.render()
+				render()
 					- return a HTML button from button class instance.

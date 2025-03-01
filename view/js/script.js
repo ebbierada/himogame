@@ -57,3 +57,11 @@ rollDiceBtn.addEventListener('click',()=>{
     }
     displayMessage(result,'diceRoll');
 });
+
+// Roll custom dice button function
+const customDiceRollBtn = document.getElementById('customDiceRoller');
+customDiceRollBtn.addEventListener('click',()=>{
+    const diceSide = document.getElementById('selectDice');
+    const result = diceRoll(diceSide.value);
+    displayMessage(result);
+});

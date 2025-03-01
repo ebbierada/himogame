@@ -1,0 +1,41 @@
+// abilities and skills
+
+{
+  "abilities": [
+    {
+      "name": "strength",
+      "abbreviation": "str",
+      "description": "measures physical power, carrying capacity, and melee combat prowess.",
+      "skills": ["athletics"]
+    },
+    {
+      "name": "dexterity",
+      "abbreviation": "dex",
+      "description": "measures agility, reflexes, and balance.",
+      "skills": ["acrobatics", "sleight of hand", "stealth"]
+    },
+    {
+      "name": "constitution",
+      "abbreviation": "con",
+      "description": "measures health, stamina, and resilience.",
+    },
+    {
+      "name": "intelligence",
+      "abbreviation": "int",
+      "description": "measures mental acuity, knowledge, and reasoning.",
+      "skills": ["arcana", "history", "investigation", "nature", "religion"]
+    },
+    {
+      "name": "wisdom",
+      "abbreviation": "wis",
+      "description": "measures perception, intuition, and insight.",
+      "skills": ["animal handling", "insight", "medicine", "perception", "survival"]
+    },
+    {
+      "name": "charisma",
+      "abbreviation": "cha",
+      "description": "measures personality, persuasiveness, and charm.",
+      "skills": ["deception", "intimidation", "performance", "persuasion"]
+    }
+  ]
+}

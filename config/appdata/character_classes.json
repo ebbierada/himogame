@@ -1,0 +1,224 @@
+// character classes
+{
+  "classes": [
+    {
+      "name": "Barbarian",
+      "description": "A fierce warrior who enters a battle rage. Focuses on raw strength and resilience.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity,constitution"]
+      },
+      "hit_dice": 12,
+      "skill_choices": 2,
+      "skill_options": [
+        "Animal Handling",
+        "Athletics",
+        "Intimidation",
+        "Nature",
+        "Perception",
+        "Survival"
+      ]
+    },
+    {
+      "name": "Bard",
+      "description": "A charismatic performer who uses music and magic. Versatile, with abilities in combat, magic, and social situations.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity"]
+      },
+      "hit_dice": 8,
+      "skill_choices": 3,
+      "skill_options": "Any"
+    },
+    {
+      "name": "Cleric",
+      "description": "A divine caster who channels the power of their deity. Focuses on healing, support, and divine magic.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity"]
+      },
+      "hit_dice": 8,
+      "skill_choices": 2,
+      "skill_options": [
+        "History",
+        "Insight",
+        "Medicine",
+        "Persuasion",
+        "Religion"
+      ]
+    },
+    {
+      "name": "Druid",
+      "description": "A nature-based caster who can transform into animals. Focuses on control of nature, healing, and shapeshifting.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity"]
+      },
+      "hit_dice": 8,
+      "skill_choices": 2,
+      "skill_options": [
+        "Arcana",
+        "Animal Handling",
+        "Insight",
+        "Medicine",
+        "Nature",
+        "Perception",
+        "Survival"
+      ]
+    },
+    {
+      "name": "Fighter",
+      "description": "A skilled warrior proficient in various weapons and armor. Highly customizable, with options for melee, ranged, and tactical combat.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity"]
+      },
+      "hit_dice": 10,
+      "skill_choices": 2,
+      "skill_options": [
+        "Acrobatics",
+        "Animal Handling",
+        "Athletics",
+        "History",
+        "Insight",
+        "Intimidation",
+        "Perception",
+        "Survival"
+      ]
+    },
+    {
+      "name": "Monk",
+      "description": "A martial artist who uses ki energy to enhance their abilities. Focuses on unarmed combat, speed, and agility.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity","wisdom"]
+      },
+      "hit_dice": 8,
+      "skill_choices": 2,
+      "skill_options": [
+        "Acrobatics",
+        "Athletics",
+        "History",
+        "Insight",
+        "Religion",
+        "Stealth"
+      ]
+    },
+    {
+      "name": "Paladin",
+      "description": "A holy warrior who combines martial prowess with divine magic. Focuses on protecting the innocent, smiting evil, and healing.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity"]
+      },
+      "hit_dice": 10,
+      "skill_choices": 2,
+      "skill_options": [
+        "Athletics",
+        "Insight",
+        "Intimidation",
+        "Medicine",
+        "Persuasion",
+        "Religion"
+      ]
+    },
+    {
+      "name": "Ranger",
+      "description": "A skilled hunter and tracker who excels in wilderness survival. Focuses on ranged combat, animal companions, and exploration.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity"]
+      },
+      "hit_dice": 10,
+      "skill_choices": 3,
+      "skill_options": [
+        "Animal Handling",
+        "Athletics",
+        "Insight",
+        "Investigation",
+        "Nature",
+        "Perception",
+        "Stealth",
+        "Survival"
+      ]
+    },
+    {
+      "name": "Rogue",
+      "description": "A stealthy and cunning character who excels in deception and subterfuge. Focuses on stealth, skill, and dealing high damage.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity"]
+      },
+      "hit_dice": 8,
+      "skill_choices": 4,
+      "skill_options": [
+        "Acrobatics",
+        "Athletics",
+        "Deception",
+        "Insight",
+        "Intimidation",
+        "Investigation",
+        "Perception",
+        "Performance",
+        "Persuasion",
+        "Sleight of Hand",
+        "Stealth"
+      ]
+    },
+    {
+      "name": "Sorcerer",
+      "description": "A natural-born caster who wields innate magical power. Focuses on powerful and spontaneous spellcasting.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity"]
+      },
+      "hit_dice": 6,
+      "skill_choices": 2,
+      "skill_options": [
+        "Arcana",
+        "Deception",
+        "Insight",
+        "Intimidation",
+        "Persuasion",
+        "Religion"
+      ]
+    },
+    {
+      "name": "Warlock",
+      "description": "A caster who gains magical power through a pact with a supernatural entity. Focuses on eldritch blasts, invocations, and pact magic.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity"]
+      },
+      "hit_dice": 8,
+      "skill_choices": 2,
+      "skill_options": [
+        "Arcana",
+        "Deception",
+        "History",
+        "Intimidation",
+        "Investigation",
+        "Nature",
+        "Religion"
+      ]
+    },
+    {
+      "name": "Wizard",
+      "description": "A scholarly caster who studies arcane magic from books. Focuses on a wide range of spells and arcane knowledge.",
+      "armour_class": {
+      	"score": 10,
+      	"plus_modifier": ["dexterity"]
+      },
+      "hit_dice": 6,
+      "skill_choices": 2,
+      "skill_options": [
+        "Arcana",
+        "History",
+        "Insight",
+        "Investigation",
+        "Medicine",
+        "Religion"
+      ]
+    }
+  ]
+}

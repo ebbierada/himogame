@@ -39,7 +39,7 @@
     <div class="stat ability-info">
         <h3>Ability Scores / Modifier</h3>
         <dl>
-            <dt>Strengh</dt>
+            <dt>Strength</dt>
                 <dd>9 / -1</dd>
             <dt>Dexterity</dt>
                 <dd>14 / +2</dd>

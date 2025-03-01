@@ -1,0 +1,28 @@
+{
+	"details": {
+		"name":"edd",
+		"titles": ["deathbringer"],
+		"gender":"male",
+		"race":"human",
+		"class":"mage"
+	},
+	"game_stats": {
+		"armour_class": 10,
+		"health_point": 10,
+		"magic_point": 10,
+		"Initiative": 10,
+		"Proficiency": 10,
+		"level": 1,
+		"experience_point": 0
+	},
+	"ability": {
+		"strength": {
+			"score":18,
+			"modifier":},
+		"dexterity": 17,
+		"constitution": 13,
+		"intelligence": 11,
+		"wisdom": 10,
+		"charisma": 11
+	}
+}
