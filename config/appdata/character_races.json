@@ -1,70 +1,129 @@
-// race list
-
 [
-	{	"name": "dwarf",
-		"base_ability": { "constitution": 2 },
-		"subrace": [
-			{"name": "hill","ability": {"wisdom": 1} },
-			{"name": "mountain","ability": {"strength": 2} }
-		]
-	},
-	{	"name": "elf",
-		"base_ability": { "dexterity": 2 },
-		"subrace": [
-			{"name": "high","ability": {"intelligence": 1} },
-			{"name": "wood","ability": {"wisdom": 2} },
-			{"name": "drow","ability": {"charisma": 1} }
-		]
-	},
-	{	"name": "halfling",
-		"base_ability": { "dexterity": 2 },
-		"subrace": [
-			{"name": "lightfoot","ability": {"charisma": 1} },
-			{"name": "stout","ability": {"constitution": 1} }
-		]
-	},
-	{	"name": "human",
-		"base_ability": {
-			"strength": 1,
-			"dexterity": 1,
-			"constitution": 1,
-			"intelligence": 1,
-			"wisdom": 1,
-			"charisma": 1
-		 }
-	},
-	{	"name": "gnome",
-		"base_ability": { "intelligence": 2 },
-		"subrace": [
-			{"name": "forest","ability": {"dexterity": 1} },
-			{"name": "rock","ability": {"constitution": 1} }
-		]
-	},
-	{	"name": "half-elf",
-		"base_ability": { "charisma": 2 },
-		"has_custom_ability": true,
-		"custom_ability_count": 2,
-		"custom_ability_score": 1,
-	},
-	{	"name": "half-orc",
-		"base_ability": { 
-			"strength": 2,
-			"constitution": 1
-		 }
-	},
-	{	"name": "tiefling",
-		"base_ability": { 
-			"charisma": 2,
-			"intelligence": 1
-		 }
-	},
-	{	"name": "dragonborn",
-		"base_ability": { 
-			"strength": 2,
-			"charisma": 1
-		 }
-	}
+    {
+        "name": "dwarf",
+        "base_ability": {
+            "constitution": 2
+        },
+        "subrace": [
+            {
+                "name": "hill",
+                "ability": {
+                    "wisdom": 1
+                }
+            },
+            {
+                "name": "mountain",
+                "ability": {
+                    "strength": 2
+                }
+            }
+        ]
+    },
+    {
+        "name": "elf",
+        "base_ability": {
+            "dexterity": 2
+        },
+        "subrace": [
+            {
+                "name": "high",
+                "ability": {
+                    "intelligence": 1
+                }
+            },
+            {
+                "name": "wood",
+                "ability": {
+                    "wisdom": 2
+                }
+            },
+            {
+                "name": "drow",
+                "ability": {
+                    "charisma": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "halfling",
+        "base_ability": {
+            "dexterity": 2
+        },
+        "subrace": [
+            {
+                "name": "lightfoot",
+                "ability": {
+                    "charisma": 1
+                }
+            },
+            {
+                "name": "stout",
+                "ability": {
+                    "constitution": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "human",
+        "base_ability": {
+            "strength": 1,
+            "dexterity": 1,
+            "constitution": 1,
+            "intelligence": 1,
+            "wisdom": 1,
+            "charisma": 1
+        }
+    },
+    {
+        "name": "gnome",
+        "base_ability": {
+            "intelligence": 2
+        },
+        "subrace": [
+            {
+                "name": "forest",
+                "ability": {
+                    "dexterity": 1
+                }
+            },
+            {
+                "name": "rock",
+                "ability": {
+                    "constitution": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "half-elf",
+        "base_ability": {
+            "charisma": 2
+        },
+        "has_custom_ability": true,
+        "custom_ability_count": 2,
+        "custom_ability_score": 1
+    },
+    {
+        "name": "half-orc",
+        "base_ability": {
+            "strength": 2,
+            "constitution": 1
+        }
+    },
+    {
+        "name": "tiefling",
+        "base_ability": {
+            "charisma": 2,
+            "intelligence": 1
+        }
+    },
+    {
+        "name": "dragonborn",
+        "base_ability": {
+            "strength": 2,
+            "charisma": 1
+        }
+    }
 ]
-
-
-// Skill Proficiencies
