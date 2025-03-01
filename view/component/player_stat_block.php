@@ -1,13 +1,24 @@
+<?php
+    include 'model/character.php';
+    
+    // create player's character
+    $playerCharacter = new Character(
+        name: 'Edd Nightwhisper',
+        characterClass: 'mage',
+        race: 'elf',
+        level: 1
+    );
+?>
 <section>
     <div class="stat character-info">
         <h3>Character info</h3>
         <dl>
             <dt>Name</dt>
-                <dd>Zephyra Nightwhisper</dd>
+                <dd><?=$playerCharacter->name?></dd>
             <dt>Race</dt>
-                <dd>Tiefling</dd>
+                <dd><?=ucfirst($playerCharacter->race)?></dd>
             <dt>Class</dt>
-                <dd>Warlock</dd>
+                <dd><?=ucfirst($playerCharacter->characterClass)?></dd>
         </dl>
     </div>
     <div class="stat character-info-2">
