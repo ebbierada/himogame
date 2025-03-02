@@ -1,6 +1,10 @@
 /* System Variable */
 
 :root {
+	/* Font family */
+	--sys-font-family-mono: monospace;
+	--sys-font-family-serif: garamond, serif;
+
 	/*	surface color*/
 	--sys-color-main-surface: #282a2c;
 	--sys-color-main-surface-2: #1b1c1d;
@@ -8,6 +12,8 @@
 	/*	font color*/
 	--sys-color-font-main: #ededed;
 	--sys-color-font-2: #868686;
+
+	--sys-modifier-high: #70b808;
 
 	/*	Margin and Padding*/
 	--sys-padding: 10px;
@@ -19,7 +25,7 @@
 /* General Style */
 
 * {
-	font-family: monospace;
+	font-family: var(--sys-font-family-serif);
 }
 
 	/* nameless elements */
@@ -45,6 +51,7 @@ div {
 h2, h3 {
 	margin: 0;
 }
+
 
 	/* Id Elements */
 
@@ -95,6 +102,39 @@ h2, h3 {
 	grid-template-columns: repeat(3, 1fr)
 }
 
+.ability-info ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+.ability-info ul li{
+	margin-bottom: 5px;
+}
+
+.ability-info span.modifier {
+	padding-left: 10px;
+}
+
+span.level-low {
+	color: red;
+}
+
+span.level-high{
+	color: var(--sys-modifier-high);
+}
+
+ul.list-skills li {
+	padding-left: 20px;
+	font-size: .9em;
+}
+
+.proficiency-marker{
+	color: #ede288;
+  	font-size: .8em;
+  	font-style: italic;
+  	padding-left: 10px;
+}
+
 .badge {
 	flex-grow: 1;
 	flex-basis: auto;
@@ -105,5 +145,10 @@ h2, h3 {
 }
 
 .badge-title {
-	font-size: xx-small;
+	font-size: .85em;
+}
+
+.label-skill {
+	font-size: x-small;
+	color: cadetblue;
 }

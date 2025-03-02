@@ -1,5 +1,4 @@
 <?php
-// class for character
 
 class Character {
 
@@ -16,6 +15,17 @@ class Character {
     public $wisdom;
     public $charisma;
 
+    //Dynamic Properties
+    public $strengthModifier;
+    public $dexterityModifier;
+    public $constitutionModifier;
+    public $intelligenceModifier;
+    public $wisdomModifier;
+    public $charismaModifier;
+
+    //Proficiencies Properties
+    public $proficienciesSkills;
+
     // Constructor (Initialize Properties)
     public function __construct(
         string 	$name,
@@ -27,7 +37,9 @@ class Character {
         int 	$constitution = 0,
         int 	$intelligence = 0,
         int 	$wisdom = 0,
-        int 	$charisma = 0
+        int 	$charisma = 0,
+
+        array   $proficienciesSkills = []
     ) {
         $this->name = $name;
         $this->characterClass = $characterClass;
@@ -40,15 +52,42 @@ class Character {
         $this->wisdom = $wisdom;
         $this->charisma = $charisma;
 
-        // // Initialize other properties (e.g., HP, AC, MP)
+        // Initialize other properties (e.g., HP, AC, MP)
+        $this->strengthModifier = floor(($strength - 10) / 2);
+        $this->dexterityModifier = floor(($dexterity - 10) / 2);
+        $this->constitutionModifier = floor(($constitution - 10) / 2);
+        $this->intelligenceModifier = floor(($intelligence - 10) / 2);
+        $this->wisdomModifier = floor(($wisdom - 10) / 2);
+        $this->charismaModifier = floor(($charisma - 10) / 2);
+
+        $this->proficienciesSkills = $proficienciesSkills;
+        
         // $this->healthPoints = $this->calculateMaxHP();
-        // $this->armorClass = $this->calculateArmorClass();
+        
         // $this->magicPoints = $this->calculateMaxMP();
         // $this->initiative = $this->calculateInitiative();
 
     }
 
     // Methods (Functions within the Class)
+
+    // Calculate Armor Class
+    public function armourClass() {
+        $ac = 10;
+        switch ($this->characterClass) {
+            case 'barbarian':
+                $ac += $this->dexterityModifier + $this->constitutionModifier;
+                break;
+            case 'monk':
+                $ac += $this->dexterityModifier + $this->wisdomModifier;
+                break;
+            default:
+                $ac += $this->dexterityModifier;
+        }
+        return $ac;
+    }
+
+
 
     // Calculate Max HP
     public function calculateMaxHP() {
@@ -57,11 +96,14 @@ class Character {
         return ($hitDie + $this->constitution) * $this->level;
     }
 
-    // Calculate Armor Class
-    public function calculateArmorClass() {
-        // Example Calculation (replace with your game's logic)
-        // This example is very basic.
-        return 10 + $this->dexterity;
+    // Calculate Initiative
+    public function initiative(){
+        return $this->dexterityModifier;
+    }
+
+    // Calculate Proficiency Bonus
+    public function proficiencyBonus() {
+        return floor(($this->level + 3) / 4);
     }
 
     // Calculate Max MP (if applicable)
@@ -74,24 +116,10 @@ class Character {
         }
     }
 
-    // Calculate Initiative
-    public function calculateInitiative(){
-        return $this->dexterity;
-    }
-
-    // Get Hit Die (Example - Implement your own logic)
-    public function getHitDie() {
-        switch ($this->characterClass) {
-            case 'Barbarian':
-                return 12;
-            case 'Fighter':
-                return 10;
-            case 'Wizard':
-                return 6;
-            // Add other classes
-            default:
-                return 8; // Default hit die
-        }
+    // Get hit point
+    public function getHitpoint() {
+        include 'config/appdata/character_classes.php';
+        return $characterClasses[$this->characterClass]['hitpoint'] + $this->constitutionModifier;
     }
 
     // Example Method: Display Character Info
@@ -110,6 +138,20 @@ class Character {
         echo "Intelligence: " . $this->intelligence . "<br>";
         echo "Wisdom: " . $this->wisdom . "<br>";
         echo "Charisma: " . $this->charisma . "<br>";
+    }
+
+    public function getAbilityModifier(string $ability){
+        return $this->{$ability.'Modifier'};
+    }
+
+    public function displayModifier(string $ability) {
+        $modifier = $this->{$ability.'Modifier'};
+        return ($modifier >= 1) ? '+'.$modifier : $modifier;
+    }
+
+    public function modifierLevel(string $ability) {
+        $modifier = $this->{$ability.'Modifier'};
+        return ($modifier >= 1) ? 'high' : 'low';
     }
 }
 

@@ -1,13 +1,25 @@
 <?php
     include 'model/character.php';
+    // class for character
+    include_once 'config/appdata/character_classes.php';
     
     // create player's character
     $playerCharacter = new Character(
-        name: 'Edd Nightwhisper',
-        characterClass: 'mage',
+        name: 'Badger Balder',
+        characterClass: 'barbarian',
         race: 'elf',
-        level: 1
+        level: 1,
+        strength: 15,
+        dexterity: 13,
+        intelligence: 8,
+        wisdom: 10,
+        constitution: 14,
+        charisma: 12,
+        proficienciesSkills: ['athletics','intimidation']
     );
+    // standard array point: 15, 14, 13, 12, 10, 8.
+
+    // ability and skill
 ?>
 <section>
     <div class="stat character-info">
@@ -23,59 +35,66 @@
     </div>
     <div class="stat character-info-2">
         <div class="badge">
-            <p class="badge-title">Armor Class</p>
-            <p>10</p>
+            <p class="badge-title">AC</p>
+            <p><?=$playerCharacter->armourClass()?></p>
         </div>
         <div class="badge">
             <p class="badge-title">Initiative</p>
-            <p>10</p>
+            <p><?=$playerCharacter->initiative()?></p>
         </div>
         <div class="badge">
             <p class="badge-title">Proficiency</p>
-            <p>10</p>
+            <p><?=$playerCharacter->proficiencyBonus()?></p>
         </div>
         <div class="badge">
             <p class="badge-title">HP</p>
-            <p>10</p>
+            <p><?=$playerCharacter->getHitpoint()?></p>
         </div>
         <div class="badge">
             <p class="badge-title">XP</p>
-            <p>10</p>
+            <p>0</p>
         </div>
         <div class="badge">
             <p class="badge-title">Level</p>
-            <p>1</p>
+            <p><?=$playerCharacter->level?></p>
         </div>
     </div>
     <div class="stat ability-info">
-        <h3>Ability Scores / Modifier</h3>
-        <dl>
-            <dt>Strength</dt>
-                <dd>9 / -1</dd>
-            <dt>Dexterity</dt>
-                <dd>14 / +2</dd>
-            <dt>Constitution</dt>
-                <dd>13 / +1</dd>
-            <dt>Intelligence</dt>
-                <dd>11 / +0</dd>
-            <dt>Wisdom</dt>
-                <dd>12 / +1</dd>
-            <dt>Charisma</dt>
-                <dd>17 / +4</dd>
-        </dl>
-    </div>
-    <div class="stat skill-info">
-        <h3>Skills</h3>
-        <dl>
-            <dt>Deception</dt>
-                <dd>+6</dd>
-            <dt>Persuasion</dt>
-                <dd>+6</dd>
-            <dt>Arcana</dt>
-                <dd>+2</dd>
-            <dt>Stealth</dt>
-                <dd>+2</dd>
-        </dl>
+        <h3>Abilities / Skills</h3>
+        <?php
+            include 'config/appdata/character_abilities_skills.php';
+
+            echo '<ul class="list-ability">';
+            foreach ($characterSkills as $ability => $skills) {
+                $abilityScore = $playerCharacter->{$ability};
+                $abilityModifier = $playerCharacter->getAbilityModifier($ability);
+                $displayAbilityModifier = $playerCharacter->displayModifier($ability);
+                $modLevel = $playerCharacter->modifierLevel($ability);
+
+
+                echo '<li>' . ucfirst($ability) . ': ';
+                echo "<span class=\"ability-score\" data-ability-score=\"$abilityScore\"> $abilityScore </span>";
+                echo "<span class=\"modifier level-$modLevel\" data-ability-modifier=\"$abilityModifier\">$displayAbilityModifier</span>";
+
+                    // Skill list
+                    echo '<ul class="list-skills">';
+                    if(!empty($skills)){
+                        echo '<span class="label-skill">Skills</span>';
+                    }
+                    foreach ($skills as $skill) {
+                        // profieciencyMarker
+                        $proficiencyMarker = "";
+                        if(in_array($skill,$playerCharacter->proficienciesSkills) ) {
+                            $proficiencyMarker = "<span class='proficiency-marker'>PRO</span>";
+                        }
+                        
+                        echo "<li>" .ucfirst($skill) . $proficiencyMarker."</li>";
+                    }
+                    echo '</ul>';
+                echo '</li>';
+            }
+            echo '</ul>';
+        ?>
     </div>
     <div class="stat spell-info">
         <h3>Spells</h3>

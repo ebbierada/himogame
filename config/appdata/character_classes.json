@@ -17,7 +17,32 @@
         "Nature",
         "Perception",
         "Survival"
-      ]
+      ],
+      "proficiencies": {
+        "Armor": [
+          "Light armor",
+          "Medium armor",
+          "Shields"  
+        ],
+      } 
+        
+        
+        Weapons:
+        Simple weapons
+        Martial weapons
+        Tools:
+        None
+        Saving Throws:
+        Strength   
+        Constitution
+        Skills:
+        The Barbarian can choose two skills from the following list:
+        Animal Handling
+        Athletics
+        Intimidation
+        Nature
+        Perception
+        Survival
     },
     {
       "name": "Bard",
