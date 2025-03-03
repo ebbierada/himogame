@@ -77,6 +77,16 @@
 			<div>
 				<h2>Game History</h2>
 				<div id="messagesContainer"></div>
+
+			</div>
+			<div>
+				<span class="sys_label">php outcome (test)</span>
+				<p>
+					<?php
+						include 'model/weapon.php';
+					?>
+				</p>
+				
 			</div>
 		</section>
 	</main>
